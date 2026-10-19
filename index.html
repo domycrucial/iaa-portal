@@ -924,15 +924,20 @@
 
     createChat({
       webhookUrl: N8N_PRODUCTION_WEBHOOK_URL,
-      options: {
-        title: 'IAA AI Assistant',
-        subtitle: 'Ask about Admissions, Courses, Fees & Campuses',
-        initialMessages: [
-          'Habari! Welcome to the Institute of Accountancy Arusha (IAA).',
-          'How can I help you with programmes, admissions, or campus services today?'
-        ],
-        placeholder: 'Ask anything about IAA...',
-        showWelcomeScreen: true
+      showWelcomeScreen: false,
+      defaultLanguage: 'en',
+      initialMessages: [
+        'Hello! Welcome to the Institute of Accountancy Arusha (IAA). How can I assist you today?'
+      ],
+      i18n: {
+        en: {
+          title: 'IAA Assistant',
+          subtitle: 'Institute of Accountancy Arusha',
+          footer: '',
+          getStarted: 'New Conversation',
+          inputPlaceholder: 'Type your question...',
+          closeButtonTooltip: 'Close chat'
+        }
       }
     });
   </script>
